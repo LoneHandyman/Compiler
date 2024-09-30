@@ -288,6 +288,10 @@ class AutobotCommand:
                             parsed.append(sub_command)
                         else:
                             parsed.append(self.token_buffer.pop(0))
+                if not parsed:
+                    self.error = f"ExpectedTokenNotFound"
+                    return False
+                
                 self.argv.append(parsed)
 
             return True
