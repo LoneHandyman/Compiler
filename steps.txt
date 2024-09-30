@@ -1,0 +1,21 @@
+START 'Path/to/executable.exe' !1.5
+CLICK 'Path/to/start.png' !2.5
+INPUT 'MyUsername'
+PRESS tab
+INPUT 'Password123$'
+CLICK 'Path/to/login_button.png' !1
+PRESS enter
+DO 'Path/to/file.csv'
+    CLICK 'Path/to/other_button.jpg' !1.5
+    PRESS tab
+    INPUT $'Nombres'-<My comment
+    in 
+    many 
+    lines>-
+    PRESS tab
+    INPUT $'Edad'
+    PRESS tab
+    INPUT $3
+    CLICK 'Path/to/accept_button.png' !2
+    IFIOS 'Path/to/alert_error.png' CLICK 'Path/to/close_alert.png' !3
+ITERDF down 1
